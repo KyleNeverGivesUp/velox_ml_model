@@ -16,7 +16,8 @@ if "__main__" == __name__:
         def forward(self, x):
             x = torch.relu(self.fc1(x))
             x = torch.relu(self.fc2(x))
-            x = self.fc3(x)
+            x = torch.relu(self.fc(x))
+            x = torch.softmax(self.fc3(x), dim=1)
             return x
 
     model = Net()
