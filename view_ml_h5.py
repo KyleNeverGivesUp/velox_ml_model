@@ -9,5 +9,6 @@ if __name__ == '__main__':
         for key in f.keys():
             data = f[key][()]
             print(f"{key}: shape = {data.shape}")
-            print(data[:5])  # print first 5 rows
+            print(data[:1])  # print first 5 rows
+            # print(data[:5])  # print first 5 rows
             print("-" * 40)
