@@ -25,7 +25,7 @@ if "__main__" == __name__:
     # export .h5 file
     with h5py.File("nn-test-model.h5", "w") as f:
         for name, param in model.named_parameters():
-            print(name, param)
+            print(name,param)
             f.create_dataset(name, data=param.detach().numpy())
 
     print("job_any_64.h5 saved successfully.")
